@@ -3,17 +3,43 @@
 const config = require('../config')
 const store = require('../store')
 
-const createExample = formData => {
+const signUp = formData => {
   return $.ajax({
-    url: config.apiUrl + '/examples',
+    url: config.apiUrl + '/sign-up',
     data: formData,
-    method: 'POST',
+    method: 'POST'
+  })
+}
+const signIn = formData => {
+  return $.ajax({
+    url: config.apiUrl + '/sign-in',
+    data: formData,
+    method: 'POST'
+  })
+}
+const signOut = formData => {
+  return $.ajax({
+    url: config.aprUrl + '/sign-out',
+    data: formData,
+    method: 'DELETE',
     headers: {
-      Authorization: 'Token token=' + store.user.token
+      Authorization: 'Token token =' + store.user.token
     }
   })
 }
-
+const changePassword = formData => {
+  return $.ajax({
+    url: config.apiUrl + '/change-password',
+    data: formData,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token =' + store.user.token
+    }
+  })
+}
 module.exports = {
-  createExample
+  signUp,
+  signIn,
+  signOut,
+  changePassword
 }

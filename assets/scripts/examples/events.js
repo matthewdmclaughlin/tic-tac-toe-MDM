@@ -1,29 +1,17 @@
 'use strict'
 
-const successMessage = message => {
-  $('#message').text(message)
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
-  // Clear out our getFormFields
-  $('form').trigger('reset')
-}
-const failureMessage = message => {
-  $('#message').text(message)
-  $('#message').removeClass('success')
-  $('#message').addClass('failure')
-  // Clear out our getFormFields
-  $('form').trigger('reset')
-}
+const getFormFields = require('../../../lib/get-form-fields')
+const api = require('./api')
+const ui = require('./ui')
 
-const createExampleSuccessful = responseData => {
-  // successMessage('You have created an example successfully!')
-  successMessage(`Created: ${responseData.example.text}`)
+const onCreateExample = event => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  api.createExample(formData)
+    .then(ui.createExampleSuccessful)
+    .catch(ui.createExampleFailure)
 }
-const createExampleFailure = responseData => {
-  failureMessage('Create example failed')
-}
-
 module.exports = {
-  createExampleFailure,
-  createExampleSuccessful
+  onCreateExample
 }
