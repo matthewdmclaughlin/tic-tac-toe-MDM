@@ -1,28 +1,24 @@
 'use strict'
-// save const store below for once I have SignInFailure ready
-// const store = require('./store')
+
 const store = require('../store')
 
 const successMessage = message => {
   $('#message').text(message)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
-  // Clear out our getFormFields
   $('form').trigger('reset')
 }
 const failureMessage = message => {
   $('#message').text(message)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
-  // Clear out our getFormFields
   $('form').trigger('reset')
 }
 const signUpSuccessful = responseData => {
   successMessage('You signed up successfully!')
 }
-
 const signUpFailure = () => {
-  failureMessage('You failed to sign up')
+  failureMessage('Sign up failed')
 }
 const signInSuccessful = responseData => {
   console.log('responseData is', responseData)
@@ -40,11 +36,19 @@ const signOutSuccessful = responseData => {
 const signOutFailure = responseData => {
   failureMessage('Sign out failed. Please check your username and/or password')
 }
+const changePasswordFailure = () => {
+  successMessage('You have changed your password successfully')
+}
+const changePasswordSuccessful = () => {
+  successMessage('You have changed your password successfully')
+}
 module.exports = {
   signUpSuccessful,
   signUpFailure,
   signInSuccessful,
   signInFailure,
   signOutSuccessful,
-  signOutFailure
+  signOutFailure,
+  changePasswordFailure,
+  changePasswordSuccessful
 }
