@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Tic 'Matt' Toe</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- <link rel="stylesheet" type="text/css" href="assets/styles/index.css"> -->
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Tic 'Matt' Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container">
-      <h1>Tic Tac Toe Online!</h1>
-      <form id="sign-up" class="col-md-6">
-        <h2>Register to Play!</h2>
-        <input type="email" name="credentials[email]" placeholder="Email">
-        <input type="password" name="credentials[password]" placeholder="Password">
-        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-        <button class="btn btn-primary">Register Now!</button>
-      </form>
-      <form id="sign-in" class="col-md-6">
-        <h2>Sign In</h2>
-        <input type="email" name="credentials[email]" placeholder="Email">
-        <input type="password" name="credentials[password]" placeholder="Password">
-        <button class="btn btn-primary">Sign In</button>
-      </form>
-      <form id="sign-out" class="col-md-6">
-        <h2>Sign Out</h2>
-        <button>Sign Out</button>
-      </form>
-      <form id="change-password" class="col-md-6">
-        <h2>Change Password</h2>
-        <input type="password" name="passwords[old]" placeholder="Old Password">
-        <input type="password" name="passwords[new]" placeholder="New Password">
-        <button>Change Password</button>
-      </form>
-      <div class="container">
-        <div class="row">
-          <div class="col-4 cell alt-color"></div>
-          <div class="col-4 cell alt-color"></div>
-          <div class="col-4 cell alt-color"></div>
-          <div class="col-4 cell alt-color"></div>
-          <div class="col-4 cell alt-color"></div>
-          <div class="col-4 cell alt-color"></div>
-          <div class="col-4 cell alt-color"></div>
-          <div class="col-4 cell alt-color"></div>
-          <div class="col-4 cell alt-color"></div>
-        </div>
-      </div>
-    </body>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>Tic MATT Toe Online!</h1>
+  <form id="sign-up" class="col-md-8">
+    <h2>Register to Play!</h2>
+    <input type="email" name="credentials[email]" placeholder="Email">
+    <input type="password" name="credentials[password]" placeholder="Password">
+    <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+    <button class="btn btn-primary">Register Now!</button>
+  </form>
+  <form id="sign-in" class="col-md-8">
+    <h2>Sign In</h2>
+    <input type="email" name="credentials[email]" placeholder="Email">
+    <input type="password" name="credentials[password]" placeholder="Password">
+    <button class="btn btn-primary">Sign In</button>
+  </form>
+  <form id="sign-out" class="col-md-6 hidden">
+    <h2>Sign Out</h2>
+    <button class="btn btn-primary">Sign Out</button>
+  </form>
+  <form id="change-password" class="col-md-6 hidden">
+    <h2>Change Password</h2>
+    <input type="password" name="passwords[old]" placeholder="Old Password">
+    <input type="password" name="passwords[new]" placeholder="New Password">
+    <button class="btn btn-primary">Change Password</button>
+  </form>
+  <div class="container hidden">
+    <div class="row">
+      <div class="col-4 cell"></div>
+      <div class="col-4 cell"></div>
+      <div class="col-4 cell"></div>
+      <div class="col-4 cell"></div>
+      <div class="col-4 cell"></div>
+      <div class="col-4 cell"></div>
+      <div class="col-4 cell"></div>
+      <div class="col-4 cell"></div>
+      <div class="col-4 cell"></div>
+    </div>
+  </div>
+</body>
+
 </html>
