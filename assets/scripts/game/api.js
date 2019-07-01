@@ -53,25 +53,18 @@ const watchGames = formData => {
     }
   })
 }
-// function markDiv(a) {
-//   let myDiv = document.getElementbyId(a);
-//   if (currentPlayer == 0) {
-//     div.removeClass('empty-div');
-//     div.addClass('x-move');
-//     currentPlayer = 1;
-//   } else {
-//     title.removeClass('empty-div')
-//     title.addClass('played-div')
-//   }
-// }
-// function markDiv(a){
-//   let div = document.getElementbyId(a);
-//   if (currentPlayer == 0)
-// }
+const quitGames = formData => {
+  return $.ajax({
+    url: config.aprUrl + 'games/',
+    method: 'PUT',
+    Authorization: 'Token token =' + store.user.token
+  })
+}
 module.exports = {
   indexGames,
   createGames,
   showGames,
   watchGames,
-  updateGames
+  updateGames,
+  quitGames
 }
