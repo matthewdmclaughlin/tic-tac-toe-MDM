@@ -56,6 +56,11 @@ const onUpdateGames = event => {
     .then(ui.updateGameSuccessful)
     .catch(ui.updateGameFailure)
 }
+const onQuitGames = event => {
+  event.preventDefault()
+  console.log('game abandoned')
+  api.quitGames('Quitter!')
+}
 const onClickedSquare = event => {
   console.log('square clicked', event)
   // check target for content to see if move is allowed
@@ -79,5 +84,6 @@ module.exports = {
   onShowGames,
   onWatchGames,
   onUpdateGames,
-  onClickedSquare
+  onClickedSquare,
+  onQuitGames
 }
