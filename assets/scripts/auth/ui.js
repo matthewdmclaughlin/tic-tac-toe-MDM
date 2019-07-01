@@ -4,12 +4,14 @@ const store = require('../store')
 
 const successMessage = message => {
   $('#message').text(message)
+  $('#message').css('background-color', 'green')
   $('#message').addClass('.success')
   $('#message').removeClass('.failure')
   $('form').trigger('reset')
 }
 const failureMessage = message => {
   $('#message').text(message)
+  $('#message').css('background-color', 'red')
   $('#message').removeClass('.success')
   $('#message').addClass('.failure')
   $('form').trigger('reset')
@@ -24,11 +26,11 @@ const signInSuccessful = responseData => {
   console.log('responseData is', responseData)
   successMessage('You signed in successfully')
   store.user = responseData.user
-  $('#change-password').removeClass('hidden')
   $('#sign-in').addClass('hidden')
   $('#sign-up').addClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('.container').removeClass('hidden')
+  $('#change-password').removeClass('hidden')
 }
 const signInFailure = responseData => {
   console.log('responseData is', responseData)

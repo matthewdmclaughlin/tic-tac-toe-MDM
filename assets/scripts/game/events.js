@@ -3,6 +3,7 @@
 const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const store = require('../store')
 
 const onCreateGames = event => {
   event.preventDefault()
@@ -13,6 +14,12 @@ const onCreateGames = event => {
     .then(ui.createGameSuccessful)
     .catch(ui.createGameFailure)
 }
+// const playerMove = event => {
+//   console.log('Good move!')
+//   api.updateGames()
+//     .then(ui.updateGameSuccessful)
+//     .catch(ui.updateGameFailure)
+// }
 const onIndexGames = event => {
   event.preventDefault()
   console.log('new game indexed')
@@ -49,10 +56,28 @@ const onUpdateGames = event => {
     .then(ui.updateGameSuccessful)
     .catch(ui.updateGameFailure)
 }
+const onClickedSquare = event => {
+  console.log('square clicked', event)
+  // check target for content to see if move is allowed
+  if ($(event.target).text() === 'O' || $(event.target).text() === 'X') {
+    console.log('Invalid Move')
+  } else {
+    if (store.currentPlayer === 'O') {
+      $(event.target).text('O')
+      store.currentPlayer = 'X'
+      ui.playerMessage('X')
+    } else {
+      $(event.target).text('X')
+      store.currentPlayer = 'O'
+      ui.playerMessage('O')
+    }
+  }
+}
 module.exports = {
   onCreateGames,
   onIndexGames,
   onShowGames,
   onWatchGames,
-  onUpdateGames
+  onUpdateGames,
+  onClickedSquare
 }

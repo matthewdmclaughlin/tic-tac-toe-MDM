@@ -17,13 +17,13 @@ const signIn = formData => {
     method: 'POST'
   })
 }
-const signOut = formData => {
+const signOut = () => {
+  console.log(store.user.token)
   return $.ajax({
-    url: config.aprUrl + '/sign-out',
-    data: formData,
+    url: config.apiUrl + '/sign-out/',
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token =' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
@@ -33,7 +33,7 @@ const changePassword = formData => {
     data: formData,
     method: 'PATCH',
     headers: {
-      Authorization: 'Token token =' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }

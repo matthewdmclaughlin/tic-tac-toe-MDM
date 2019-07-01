@@ -53,6 +53,21 @@ const watchGames = formData => {
     }
   })
 }
+// function markDiv(a) {
+//   let myDiv = document.getElementbyId(a);
+//   if (currentPlayer == 0) {
+//     div.removeClass('empty-div');
+//     div.addClass('x-move');
+//     currentPlayer = 1;
+//   } else {
+//     title.removeClass('empty-div')
+//     title.addClass('played-div')
+//   }
+// }
+// function markDiv(a){
+//   let div = document.getElementbyId(a);
+//   if (currentPlayer == 0)
+// }
 module.exports = {
   indexGames,
   createGames,
