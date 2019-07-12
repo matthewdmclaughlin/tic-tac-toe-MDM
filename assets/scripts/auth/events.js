@@ -43,8 +43,8 @@ const onQuickSignIn = event => {
   event.preventDefault()
   const guest = {
     'credentials': {
-      'email': 'e@e',
-      'password': 'b'
+      'email': 'matt@matt',
+      'password': 'matt'
     }
   }
   api.signIn(guest)
