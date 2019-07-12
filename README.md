@@ -35,7 +35,13 @@ choice.  Maybe a single player vs. the computer version of the game is on the
 horizon, provided the overall fear of Skynet is not too great at the time.
 
 TECHNICAL SPECS:
-I used Atom v 1.38.2 x64 to edit, npm, grunt and Chrome browsers exclusively.
+I used:
+- Atom v 1.38.2 x64
+- JavaScript
+- HTML
+- CSS
+- Ajax
+- Chrome
 
 PROJECT WIREFRAME:
 View this project's wireframe here: https://imgur.com/u8ppQVM

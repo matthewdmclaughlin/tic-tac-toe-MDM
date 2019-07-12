@@ -1,28 +1,18 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
 const authEvents = require('./auth/events')
-const gameEvents = require('./game/events.js')
-// const exampleEvents = require('./examples/events')
-
+const gameEvents = require('./game/events')
 $(() => {
   // your JS code goes here
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#create-game').on('submit', gameEvents.onCreateGame)
-  $('.cell').on('click', gameEvents.onClickedSquare)
-  // $('#1').on('click', gameEvents.onClickedSquare)
-  // $('#2').on('click', gameEvents.onClickedSquare)
-  // $('#3').on('click', gameEvents.onClickedSquare)
-  // $('#4').on('click', gameEvents.onClickedSquare)
-  // $('#5').on('click', gameEvents.onClickedSquare)
-  // $('#6').on('click', gameEvents.onClickedSquare)
-  // $('#7').on('click', gameEvents.onClickedSquare)
-  // $('#8').on('click', gameEvents.onClickedSquare)
+  $('#new-game').on('click', gameEvents.onCreateGame)
+  $('#box').on('click', gameEvents.onClickBox)
+  $('#new-gameboard').on('submit', gameEvents.onCreateGames)
+  $('.cell').on('click', gameEvents.onUpdateGames)
+  $('#quit-game').on('submit', gameEvents.onQuitGames)
+  $('#quickSignIn').on('click', authEvents.onQuickSignIn)
+  $('#get-game').on('click', gameEvents.onGetGame)
 })

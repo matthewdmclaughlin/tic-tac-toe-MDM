@@ -1,4 +1,5 @@
 'use strict'
+const store = require('../store')
 
 const successMessage = message => {
   $('#message').text(message)
@@ -16,34 +17,31 @@ const failureMessage = message => {
 }
 
 const createGameSuccessful = responseData => {
-  // successMessage('You have created an example successfully!')
-  successMessage(`Created: ${responseData.game.text}`)
+  successMessage(`Create game successfully`)
+  store.newGame = responseData.game
+  $('.container').removeClass('hidden')
 }
 const createGameFailure = responseData => {
   failureMessage('Create game failed')
 }
 const playerMessage = message => {
-  $('.message').text('Current Player is' + ' ' + message)
+  $('#message').text('Current Player is' + ' ' + message)
 }
-// const onClick = event => {
-//   const text = $(event.target).text()
-//   if (text === '') {
-//     const index = $(event.target).data('cell-index')
-//     console.log(index)
-//     gameGrid[index] = currentPlayer
-//     winCombinations()
-//     api.onUpdateGames(index, currentPlayer, winCondition)
-//     Switchplayer()
-//   }
-// }
-// let currentTurn = event.target.id
-//   console.log(currentTurn)
+const playerQuit = message => {
+  $('#quitgame').text('You have exited and saved this game in progress')
+}
+const indexGameSuccessful = data => {
+  $('#message').text('Total games : ' + data.games.length)
+}
 
+const indexGameFailure = data => {
+  $('#message').text('Failed to get games')
+}
 module.exports = {
-  createGameFailure,
   createGameSuccessful,
-  playerMessage
-  // winCondition,
-  // onClick
-
+  createGameFailure,
+  playerMessage,
+  playerQuit,
+  indexGameSuccessful,
+  indexGameFailure
 }
