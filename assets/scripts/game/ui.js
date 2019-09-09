@@ -7,6 +7,10 @@ const successMessage = message => {
   $('#message').addClass('success')
   // Clear out our getFormFields
   $('form').trigger('reset')
+  setTimeout(function () {
+    $('#message').removeClass('success')
+    $('#message').text('')
+  }, 2500)
 }
 const failureMessage = message => {
   $('#message').text(message)

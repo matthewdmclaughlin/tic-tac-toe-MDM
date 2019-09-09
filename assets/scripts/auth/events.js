@@ -24,12 +24,14 @@ const onSignIn = event => {
     .then(ui.signInSuccessful)
     .catch(ui.signInFailure)
 }
+
 const onSignOut = event => {
   event.preventDefault()
   api.signOut()
     .then(ui.signOutSuccessful)
     .catch(ui.signOutFailure)
 }
+
 const onChangePassword = event => {
   event.preventDefault()
   const form = event.target
@@ -39,6 +41,7 @@ const onChangePassword = event => {
     .then(ui.changePasswordSuccessful)
     .catch(ui.changePasswordFailure)
 }
+
 const onQuickSignIn = event => {
   event.preventDefault()
   const guest = {

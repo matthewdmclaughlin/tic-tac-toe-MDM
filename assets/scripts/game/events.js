@@ -94,7 +94,7 @@ const onUpdateGames = event => {
     // const winnerCheck = (id1, id2, id3) => {
     //
   } else {
-    $('#message').text('You cannot click')
+    $('#message').text('Further Movements Disabled')
   }
 }
 

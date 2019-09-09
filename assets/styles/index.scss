@@ -1,5 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background-attachment: fixed;
+  background-image: url('public/bkgimgjpg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .cell {
   border: 15px solid;
   height: 10rem;
@@ -13,13 +21,21 @@
   margin: auto;
 }
 
-.success {
-  background-color: $green;
+.divcolor {
+  align-content: center;
+  background-color: powderblue;
+  color: $white;
+  font-size: 80px;
+  text-align: center;
 }
 
-.failure {
-  background-color: $red;
-}
+// .success {
+//   background-color: $green;
+// }
+//
+// .failure {
+//   background-color: $red;
+// }
 
 .hidden {
   display: none;
