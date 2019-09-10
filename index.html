@@ -14,10 +14,10 @@
 </head>
 
 <body>
-  <h1>Tic MATT Toe Online!</h1>
+  <h1 style="color:white;">Tic 'MATT' Toe Online!</h1>
 
   <form id="sign-up" class="col-md-8">
-    <h2>Register to Play!</h2>
+    <h2 style=color:white;>Register to Play!</h2>
     <input type="email" name="credentials[email]" placeholder="Email">
     <input type="password" name="credentials[password]" placeholder="Password">
     <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
@@ -25,25 +25,26 @@
   </form>
 
   <form id="sign-in" class="col-md-8">
-    <h2>Sign In</h2>
+    <h2 style=color:white;>Sign In</h2>
     <input type="email" name="credentials[email]" placeholder="Email">
     <input type="password" name="credentials[password]" placeholder="Password">
     <button class="btn btn-primary">Sign In</button>
   </form>
 
   <form id="sign-out" class="col-md-6 hidden">
-    <h2>Sign Out</h2>
-    <button class="btn btn-primary">Sign Out</button>
+    <h2 style=color:white;>Sign Out</h2>
+    <button class="btn btn-danger">Sign Out</button>
     <!-- Show actions at inappropriate times (example: sign out button when not signed in). -->
   </form>
-  <button class="btn btn-primary hidden" id="get-game">Total Games Played</button>
   <form id="change-password" class="col-md-6 hidden">
-    <h2>Change Password</h2>
+    <h2 style=color:white;>Change Password</h2>
     <input type="password" name="passwords[old]" placeholder="Old Password">
     <input type="password" name="passwords[new]" placeholder="New Password">
     <!-- <input type="submit" value="Change Password!"> do I need this? -->
     <button class="btn btn-primary">Change Password</button>
   </form>
+
+
   <!-- <form>
   <button id="quickSignIn" class="btn btn-primary">Quick Sign In</button>
 </form> -->
@@ -51,16 +52,17 @@
 <!--FIX: Abandon Game/Play Again available before sign in and do not work. -->
 <!-- Abandon Game/Play Again available before sign in. -->
 <form class="hidden" id="new-gameboard">
-  <h2>New Game!</h2>
+  <h2 style=color:white;>New Game / Game Stats</h2>
   <button class="btn btn-primary">New Game</button>
 </form>
 
-<form class="hidden" id="quit-game">
+<!-- <form class="hidden" id="quit-game">
   <h2>Quit Game</h2>
   <button id=quitGames class="btn btn-primary hidden">Quit Game</button>
-</form>
+</form> -->
+  <button class="btn btn-primary hidden" id="get-game">Game Stats</button>
 
-  <div id="message"></div>
+  <div id="message" style=color:white;></div>
   <div class="container hidden">
     <div class="row">
       <div id=0 class="col-4 cell divcolor"></div>
