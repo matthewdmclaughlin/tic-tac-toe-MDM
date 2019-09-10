@@ -21,7 +21,7 @@ const failureMessage = message => {
 }
 
 const createGameSuccessful = responseData => {
-  successMessage(`Create game successfully`)
+  successMessage(`Game created successfully`)
   store.newGame = responseData.game
   $('.container').removeClass('hidden')
 }
@@ -39,7 +39,7 @@ const indexGameSuccessful = data => {
 }
 
 const indexGameFailure = data => {
-  $('#message').text('Failed to get games')
+  $('#message').text('Failed load games')
 }
 module.exports = {
   createGameSuccessful,

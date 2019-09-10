@@ -77,6 +77,6 @@ module.exports = {
   signOutSuccessful,
   signOutFailure,
   changePasswordFailure,
-  changePasswordSuccessful,
-  quickSignIn
+  changePasswordSuccessful
+  // quickSignIn
 }
