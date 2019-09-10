@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tic 'Matt' Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1 style="color:white;">Tic 'MATT' Toe Online!</h1>
+
+  <form id="sign-up" class="col-md-8">
+    <h2 style=color:white;>Register to Play!</h2>
+    <input type="email" name="credentials[email]" placeholder="Email">
+    <input type="password" name="credentials[password]" placeholder="Password">
+    <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+    <button class="btn btn-primary">Register Now!</button>
+  </form>
+
+  <form id="sign-in" class="col-md-8">
+    <h2 style=color:white;>Sign In</h2>
+    <input type="email" name="credentials[email]" placeholder="Email">
+    <input type="password" name="credentials[password]" placeholder="Password">
+    <button class="btn btn-primary">Sign In</button>
+  </form>
+
+  <form id="sign-out" class="col-md-6 hidden">
+    <h2 style=color:white;>Sign Out</h2>
+    <button class="btn btn-danger">Sign Out</button>
+    <!-- Show actions at inappropriate times (example: sign out button when not signed in). -->
+  </form>
+  <form id="change-password" class="col-md-6 hidden">
+    <h2 style=color:white;>Change Password</h2>
+    <input type="password" name="passwords[old]" placeholder="Old Password">
+    <input type="password" name="passwords[new]" placeholder="New Password">
+    <!-- <input type="submit" value="Change Password!"> do I need this? -->
+    <button class="btn btn-primary">Change Password</button>
+  </form>
+
+
+  <!-- <form>
+  <button id="quickSignIn" class="btn btn-primary">Quick Sign In</button>
+</form> -->
+<!-- Display non-functional buttons, nor buttons that do not successfully complete a task. -->
+<!--FIX: Abandon Game/Play Again available before sign in and do not work. -->
+<!-- Abandon Game/Play Again available before sign in. -->
+<form class="hidden" id="new-gameboard">
+  <h2 style=color:white;>New Game / Game Stats</h2>
+  <button class="btn btn-primary">New Game</button>
+</form>
+
+<!-- <form class="hidden" id="quit-game">
+  <h2>Quit Game</h2>
+  <button id=quitGames class="btn btn-primary hidden">Quit Game</button>
+</form> -->
+  <button class="btn btn-primary hidden" id="get-game">Game Stats</button>
+
+  <div id="message" style=color:white;></div>
+  <div class="container hidden">
+    <div class="row">
+      <div id=0 class="col-4 cell divcolor"></div>
+      <div id=1 class="col-4 cell divcolor"></div>
+      <div id=2 class="col-4 cell divcolor"></div>
+      <div id=3 class="col-4 cell divcolor"></div>
+      <div id=4 class="col-4 cell divcolor"></div>
+      <div id=5 class="col-4 cell divcolor"></div>
+      <div id=6 class="col-4 cell divcolor"></div>
+      <div id=7 class="col-4 cell divcolor"></div>
+      <div id=8 class="col-4 cell divcolor"></div>
+    </div>
+  </div>
+</body>
+
+</html>
